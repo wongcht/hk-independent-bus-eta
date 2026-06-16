@@ -35,7 +35,7 @@
     "lodash.throttle": "^4.1.1",
     "lzutf8-light": "^0.6.5",
     "maplibre-gl": "^5.24.0",
-    "plotly.js-basic-dist": "^2.30.0",
+    "plotly.js-basic-dist": "^3.6.0",
     "pmtiles": "^4.3.0",
     "proj4": "^2.7.4",
     "react": "^18.2.0",
