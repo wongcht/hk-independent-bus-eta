@@ -7,8 +7,19 @@ import {
   SxProps,
   Theme,
 } from "@mui/material";
-import { RefObject, useContext, useRef } from "react";
+import { ComponentType, ReactNode, RefObject, useContext, useRef } from "react";
 import Draggable from "react-draggable";
+
+// react-draggable's bundled types mark every prop with a runtime
+// `defaultProps` as required instead of optional, so TS demands every
+// prop even though they're all defaulted at runtime. Re-type locally.
+const DraggableComponent = Draggable as unknown as ComponentType<{
+  nodeRef: RefObject<HTMLDivElement | null>;
+  handle?: string;
+  cancel?: string;
+  positionOffset?: { x: number | string; y: number | string };
+  children: ReactNode;
+}>;
 import SuccinctTimeReport from "../home/SuccinctTimeReport";
 import {
   Minimize as MinimizeIcon,
@@ -20,14 +31,14 @@ import PinnedEtasContext from "../../context/PinnedEtasContext";
 const PinDialogContainer = (props: ContainerProps) => {
   const nodeRef = useRef<HTMLDivElement>(null);
   return (
-    <Draggable
-      nodeRef={nodeRef as RefObject<HTMLDivElement>}
+    <DraggableComponent
+      nodeRef={nodeRef}
       handle="#draggable-pin-dialog-title"
       cancel='[id*="pin-dialog-irrelavant"]'
       positionOffset={{ x: 0, y: 150 }}
     >
       <Container {...props} ref={nodeRef} />
-    </Draggable>
+    </DraggableComponent>
   );
 };
 
