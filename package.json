@@ -84,7 +84,7 @@
     "@typescript-eslint/eslint-plugin": "^8.61.1",
     "@typescript-eslint/parser": "^8.61.1",
     "@vitejs/plugin-basic-ssl": "^2.3.0",
-    "@vitejs/plugin-react-swc": "^3.6.0",
+    "@vitejs/plugin-react-swc": "^4.3.1",
     "clean-css": "^5.3.3",
     "dotenv": "^17.4.2",
     "eslint": "^8",
