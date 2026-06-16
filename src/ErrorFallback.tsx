@@ -1,19 +1,22 @@
 import { useEffect } from "react";
 
 interface Props {
-  error: Error;
+  error: unknown;
 }
 
 const ErrorFallback = ({ error }: Props) => {
+  const name = error instanceof Error ? error.name : undefined;
+  const stack = error instanceof Error ? error.stack : undefined;
+
   useEffect(() => {
-    if (error.name === "ChunkLoadError" || error.name === "TypeError") {
+    if (name === "ChunkLoadError" || name === "TypeError") {
       setTimeout(() => {
         window.location.reload();
       }, 500);
     }
-  }, [error]);
+  }, [name]);
 
-  if (error.name === "ChunkLoadError" || error.name === "TypeError") {
+  if (name === "ChunkLoadError" || name === "TypeError") {
     return (
       <div style={{ color: "#fff", fontSize: 18 }}>
         <p>App Updated, reloading...</p>
@@ -30,7 +33,7 @@ const ErrorFallback = ({ error }: Props) => {
         </a>
         ?
       </span>
-      <pre>{error.stack ?? "Unknown error"}</pre>
+      <pre>{stack ?? "Unknown error"}</pre>
     </div>
   );
 };
