@@ -72,7 +72,7 @@
     "@types/proj4": "^2.5.2",
     "@types/puppeteer": "^5.4.6",
     "@types/react": "^18.2.63",
-    "@types/react-beautiful-dnd": "^13.1.4",
+    "@types/react-beautiful-dnd": "^13.1.8",
     "@types/react-dom": "^18.2.19",
     "@types/react-i18next": "^8.1.0",
     "@types/react-plotly.js": "^2.6.3",
