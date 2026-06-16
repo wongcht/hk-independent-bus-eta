@@ -33,7 +33,7 @@
     "immer": "^11.1.8",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
-    "lzutf8-light": "^0.6.2",
+    "lzutf8-light": "^0.6.5",
     "maplibre-gl": "^5.24.0",
     "plotly.js-basic-dist": "^2.30.0",
     "pmtiles": "^4.3.0",

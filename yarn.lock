@@ -6961,10 +6961,10 @@ lz-string@^1.4.4:
   resolved "https://registry.yarnpkg.com/lz-string/-/lz-string-1.5.0.tgz#c1ab50f77887b712621201ba9fd4e3a6ed099941"
   integrity sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==
 
-lzutf8-light@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/lzutf8-light/-/lzutf8-light-0.6.2.tgz#097b111fb60b791019b080f81496d30de10f47d1"
-  integrity sha512-tx0RvHNemznhXzCMkPk/K9x4k9/PTgDdyYC1/7uotW0+VYu82NxFIgU4XgBRgAm9FcUQlr3cDgdEOaxaaqSSLA==
+lzutf8-light@^0.6.5:
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/lzutf8-light/-/lzutf8-light-0.6.5.tgz#dcd51744a6c9e7059930a09740715ad8f0dd8143"
+  integrity sha512-Xy1990CAT+XdENiFDG+fsrriIe97br83sz+B9a9Zm/3dlOtA3Ay0mo9tLxAaF71rZtauMjQSTbngJST0pEd3Fg==
 
 magic-string@^0.25.0, magic-string@^0.25.7:
   version "0.25.9"
