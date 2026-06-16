@@ -8275,13 +8275,12 @@ react-window@^1.8.6:
     "@babel/runtime" "^7.0.0"
     memoize-one ">=3.1.1 <6"
 
-react-world-compass@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/react-world-compass/-/react-world-compass-1.1.1.tgz#34c65fa66981bdfbd9db18820bbbaccfe3b33f91"
-  integrity sha512-oqkjm40i0qqetcL3tbyafRJW8yNPSORuBQhdAhSKdbJjh51Q4rC3flBd2HpQqfjawRBPqaYfg4ELlRtiCHislg==
+react-world-compass@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/react-world-compass/-/react-world-compass-1.1.4.tgz#79d98f614cee4766ca3d454c0ef5d97ef430a9d6"
+  integrity sha512-MGObe3LY3Q9wuQIaGGY6Hqh7EjEvtl04JmMrJXB+4rmKB8FvYhW7n+R1A1e3zXlMnpKWY3bkdIYy7KyAwwfoqg==
   dependencies:
     lodash.throttle "^4.1.1"
-    react "^18.2.0"
 
 react@^18.2.0:
   version "18.2.0"
