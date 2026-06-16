@@ -90,11 +90,13 @@ const NoticeCard = () => {
   return (
     <Paper variant="outlined" sx={rootSx}>
       <Box
-        display="flex"
-        justifyContent="flex-start"
-        flexDirection="column"
-        gap={0.5}
-        overflow="scroll"
+        sx={{
+          display: "flex",
+          justifyContent: "flex-start",
+          flexDirection: "column",
+          gap: 0.5,
+          overflow: "scroll",
+        }}
       >
         <Tabs
           sx={noticeTabsSx}
@@ -112,7 +114,10 @@ const NoticeCard = () => {
           }}
         >
           {state.map((notice) => (
-            <Box display="flex" alignItems="center" gap={2} key={notice.id}>
+            <Box
+              sx={{ display: "flex", alignItems: "center", gap: 2 }}
+              key={notice.id}
+            >
               <WarnIcon color="warning" />
               <Box onClick={handleClick(viewIdx)} sx={{ cursor: "pointer" }}>
                 {notice.content[language].map((v, idx) => (

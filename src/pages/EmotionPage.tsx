@@ -12,7 +12,7 @@ const EmotionPage = () => {
     <Paper sx={paperSx}>
       <EmotionTabbar />
       <Suspense fallback={<></>}>
-        <Box overflow="auto">
+        <Box sx={{ overflow: "auto" }}>
           {(!tab || tab === "check-in") && <CheckIn />}
           {tab === "chart" && <EmotionChart />}
         </Box>
