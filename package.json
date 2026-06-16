@@ -38,7 +38,7 @@
     "plotly.js-basic-dist": "^3.6.0",
     "pmtiles": "^4.3.0",
     "proj4": "^2.20.9",
-    "react": "^18.2.0",
+    "react": "^19.2.7",
     "react-beautiful-dnd": "^13.1.1",
     "react-dom": "^19.2.7",
     "react-draggable": "^4.4.6",
