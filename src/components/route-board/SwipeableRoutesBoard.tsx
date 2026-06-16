@@ -6,7 +6,7 @@ import {
   SlideRendererCallback,
 } from "react-swipeable-views-utils";
 import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
-import { FixedSizeList } from "react-window";
+import { List } from "react-window";
 import { AutoSizer } from "react-virtualized-auto-sizer";
 import memorize from "memoize-one";
 import { Trans, useTranslation } from "react-i18next";
@@ -117,15 +117,13 @@ const SwipeableRoutesBoard = ({
         {coItemDataList[index].routeList.length > 0 ? (
           <AutoSizer
             renderProp={({ height = 0, width = 0 }) => (
-              <FixedSizeList
-                height={height * 0.98}
-                itemCount={coItemDataList[index].routeList.length}
-                itemSize={itemHeight}
-                width={width}
-                itemData={coItemDataList[index]}
-              >
-                {RouteRowList}
-              </FixedSizeList>
+              <List
+                rowComponent={RouteRowList}
+                rowCount={coItemDataList[index].routeList.length}
+                rowHeight={itemHeight}
+                rowProps={coItemDataList[index]}
+                style={{ height: height * 0.98, width }}
+              />
             )}
           />
         ) : (
@@ -204,10 +202,15 @@ const SwipeableRoutesBoard = ({
           <Box sx={prerenderListSx}>
             {coItemDataList[0].routeList.map((_: any, idx: number) => (
               <RouteRowList
-                data={coItemDataList[0]}
+                {...coItemDataList[0]}
                 key={`route-${idx}`}
                 index={idx}
-                style={null} // required by react-window
+                ariaAttributes={{
+                  "aria-posinset": idx + 1,
+                  "aria-setsize": coItemDataList[0].routeList.length,
+                  role: "listitem",
+                }}
+                style={{}}
               />
             ))}
           </Box>
