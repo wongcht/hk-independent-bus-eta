@@ -27,7 +27,7 @@
     "@mui/x-date-pickers": "^6.5.0",
     "@types/plotly.js-basic-dist": "^1.54.4",
     "core-js": "^3.49.0",
-    "dayjs": "^1.11.7",
+    "dayjs": "^1.11.21",
     "hk-bus-eta": "^3.8.1",
     "i18next": "^26.3.1",
     "immer": "^11.1.8",
