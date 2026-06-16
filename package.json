@@ -68,7 +68,7 @@
     "@types/lodash.debounce": "^4.0.9",
     "@types/lodash.throttle": "^4.1.9",
     "@types/merge-images": "^1.2.4",
-    "@types/node": "^18.0.0",
+    "@types/node": "^25.9.3",
     "@types/proj4": "^2.5.2",
     "@types/puppeteer": "^5.4.6",
     "@types/react": "^18.2.63",
