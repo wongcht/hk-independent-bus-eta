@@ -137,7 +137,7 @@ const SuccinctTimeReport = ({
       <ListItem onClick={handleClick} sx={rootSx}>
         <ListItemText
           primary={
-            <Box overflow="hidden">
+            <Box sx={{ overflow: "hidden" }}>
               <RouteNo
                 routeNo={language === "zh" ? t(routeNo) : routeNo}
                 fontSize={co[0] === "mtr" ? "1.1rem" : undefined}
@@ -177,9 +177,11 @@ const SuccinctTimeReport = ({
               seq={parseInt(seq, 10)}
             />
           }
-          secondaryTypographyProps={{
-            component: "h4",
-            variant: "subtitle2",
+          slotProps={{
+            secondary: {
+              component: "h4",
+              variant: "subtitle2",
+            },
           }}
           sx={routeDestSx}
         />

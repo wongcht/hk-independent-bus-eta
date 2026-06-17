@@ -28,8 +28,10 @@ const CollectionDrawer = () => {
       anchor="bottom"
       open={collectionDrawerRoute !== null}
       onClose={() => setCollectionDrawerRoute(null)}
-      PaperProps={{
-        sx: drawerSx,
+      slotProps={{
+        paper: {
+          sx: drawerSx,
+        },
       }}
     >
       <Box sx={rootSx}>
