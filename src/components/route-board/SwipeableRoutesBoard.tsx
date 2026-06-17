@@ -7,7 +7,7 @@ import {
 } from "react-swipeable-views-utils";
 import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import { FixedSizeList } from "react-window";
-import AutoSizer from "react-virtualized-auto-sizer";
+import { AutoSizer } from "react-virtualized-auto-sizer";
 import memorize from "memoize-one";
 import { Trans, useTranslation } from "react-i18next";
 import { Box, SxProps, Theme, Typography } from "@mui/material";
@@ -115,8 +115,8 @@ const SwipeableRoutesBoard = ({
     ({ key, index }) => (
       <React.Fragment key={key}>
         {coItemDataList[index].routeList.length > 0 ? (
-          <AutoSizer>
-            {({ height, width }) => (
+          <AutoSizer
+            renderProp={({ height = 0, width = 0 }) => (
               <FixedSizeList
                 height={height * 0.98}
                 itemCount={coItemDataList[index].routeList.length}
@@ -127,10 +127,10 @@ const SwipeableRoutesBoard = ({
                 {RouteRowList}
               </FixedSizeList>
             )}
-          </AutoSizer>
+          />
         ) : (
-          <AutoSizer>
-            {({ width }) => (
+          <AutoSizer
+            renderProp={({ width }) => (
               <Box sx={noResultSx} width={width}>
                 <Box
                   display="flex"
@@ -190,7 +190,7 @@ const SwipeableRoutesBoard = ({
                 )}
               </Box>
             )}
-          </AutoSizer>
+          />
         )}
       </React.Fragment>
     ),
