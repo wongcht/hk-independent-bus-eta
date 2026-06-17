@@ -1,5 +1,5 @@
 import {
-  DeleteOutline as DeleteIcon,
+  DeleteOutlined as DeleteIcon,
   Reorder as ReorderIcon,
 } from "@mui/icons-material";
 import {
